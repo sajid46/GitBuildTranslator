@@ -39,19 +39,13 @@ public class Tests
     [Test]
     public void Translate_TestWorld_MoteDessai()
     {
-        //Arrange
         var _TranslatorService = new TranslatorRepository(new TranslatorService());
-        //Act
+
         string result = "";
         foreach (var item in words)
         {
             result = _TranslatorService.Translate(item.Item1, item.Item2);
             Assert.AreEqual(item.Item3, result);
         }
-        //string words = "test words";
-        //string result = this._repository.Translate(words, "fr");
-
-        //Assert
-        //Assert.AreEqual("mots d'essai", result);
     }
 }
